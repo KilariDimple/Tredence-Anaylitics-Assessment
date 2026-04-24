@@ -1,0 +1,224 @@
+/* ─── Toolbar ────────────────────────────────────────────────────────────────── */
+.toolbar {
+  height: 56px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 16px;
+  flex-shrink: 0;
+  z-index: 10;
+  position: relative;
+}
+
+/* ─── Sections ───────────────────────────────────────────────────────────────── */
+.left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* ─── Workflow name ───────────────────────────────────────────────────────────── */
+.nameWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.nameBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  transition: color 0.12s;
+}
+
+.nameBtn:hover {
+  color: #6366f1;
+}
+
+.nameInput {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  border: none;
+  border-bottom: 2px solid #6366f1;
+  outline: none;
+  background: transparent;
+  padding: 0 0 2px;
+  font-family: inherit;
+  width: 240px;
+}
+
+.nameSub {
+  font-size: 10.5px;
+  color: #9ca3af;
+}
+
+/* ─── Validation status ──────────────────────────────────────────────────────── */
+.statusOk {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #059669;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.statusError {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 5px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.12s;
+}
+
+.statusError:hover { background: #fee2e2; }
+
+.statusWarn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #d97706;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  padding: 5px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.12s;
+}
+
+.statusWarn:hover { background: #fef3c7; }
+
+/* ─── Validation dropdown ────────────────────────────────────────────────────── */
+.validationDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  min-width: 280px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.validationError {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: #dc2626;
+  padding: 7px 10px;
+  border-radius: 7px;
+  background: #fef2f2;
+}
+
+.validationWarning {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: #d97706;
+  padding: 7px 10px;
+  border-radius: 7px;
+  background: #fffbeb;
+}
+
+/* ─── Action buttons ─────────────────────────────────────────────────────────── */
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+  font-family: inherit;
+}
+
+.actionBtn:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.actionBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ─── Simulate button ────────────────────────────────────────────────────────── */
+.simulateBtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.12s, transform 0.10s;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.35);
+}
+
+.simulateBtn:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.simulateBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}

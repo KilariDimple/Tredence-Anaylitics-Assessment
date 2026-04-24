@@ -1,0 +1,84 @@
+/* ─── Canvas ─────────────────────────────────────────────────────────────────── */
+.canvasWrapper {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  background: #fafafa;
+  outline: none;
+}
+
+/* ─── React Flow overrides ───────────────────────────────────────────────────── */
+.canvasWrapper :global(.react-flow__edge-path) {
+  stroke: #6366f1;
+  stroke-width: 1.8;
+}
+
+.canvasWrapper :global(.react-flow__edge.selected .react-flow__edge-path) {
+  stroke: #4f46e5;
+  stroke-width: 2.5;
+}
+
+.canvasWrapper :global(.react-flow__connection-line) {
+  stroke: #6366f1;
+  stroke-width: 1.8;
+}
+
+/* ─── Controls ───────────────────────────────────────────────────────────────── */
+.controls :global(.react-flow__controls) {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.controls :global(.react-flow__controls-button) {
+  background: #fff;
+  border: none;
+  border-bottom: 1px solid #f3f4f6;
+  color: #374151;
+  transition: background 0.12s;
+}
+
+.controls :global(.react-flow__controls-button:hover) {
+  background: #f9fafb;
+}
+
+/* ─── Minimap ────────────────────────────────────────────────────────────────── */
+.minimap :global(.react-flow__minimap) {
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  background: #fff;
+}
+
+/* ─── Empty state ────────────────────────────────────────────────────────────── */
+.emptyState {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  padding: 40px;
+}
+
+.emptyIcon {
+  font-size: 40px;
+  opacity: 0.15;
+  margin-bottom: 4px;
+}
+
+.emptyTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.emptyHint {
+  font-size: 13px;
+  color: #d1d5db;
+  max-width: 320px;
+  line-height: 1.6;
+}

@@ -1,0 +1,17 @@
+/* ─── App shell ──────────────────────────────────────────────────────────────── */
+.appShell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #fafafa;
+}
+
+/* ─── Main area ──────────────────────────────────────────────────────────────── */
+.mainArea {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  min-height: 0;
+}
